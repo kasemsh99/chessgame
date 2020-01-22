@@ -41,6 +41,10 @@ int lim[100]={};
 
 main()
 {
+int user = '\0';
+char x[15] = "color ";
+x[6] = '\0';
+ x[7] = '\0';
 //int  x = 0 ;
 char ch ;
 	
@@ -49,7 +53,7 @@ char ch ;
     printf( "\n\tWELCOME TO CHESS GAME" ) ;
     printf( "\n\n\t By Hosseini, Shaker " ) ;
 	
-	 printf("\n\n If you want to change the font or background click \n\n1.Background    .  \n2.Text   .   \n3.Both...... \nenter any\
+	printf("\n\n CHANGE COLOR \n1.Background    .  \n2.Text   .   \n3.Both...... \nenter any\
 other number to exit.......... \n");
     fflush(stdin);
     scanf("%d",&user);
