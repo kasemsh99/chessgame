@@ -27,6 +27,7 @@ void queen( int , int ) ;
 void pawnb( int , int ) ;
 void player1();
 void player2();
+void help();
 int check(int , int ) ;
 int check2(int , int ) ;
 int check3(int , int ) ;
@@ -47,6 +48,53 @@ char ch ;
 	
     printf( "\n\tWELCOME TO CHESS GAME" ) ;
     printf( "\n\n\t By Hosseini, Shaker " ) ;
+	
+	 printf("\n\n If you want to change the font or background click \n\n1.Background    .  \n2.Text   .   \n3.Both...... \nenter any\
+other number to exit.......... \n");
+    fflush(stdin);
+    scanf("%d",&user);
+    switch(user)
+    {
+    case 1:
+                help();
+                printf("\n\n choose any color code for background ....");
+                fflush(stdin);
+          scanf("%c",&x[6]);
+          while(x[7] == '\0'){x[7] = '0';}
+          system(x);
+          break;
+
+     case 2:
+        help();
+           printf(" \n\n choose any color code for text ...  ");
+       while(x[6] == '\0'){ x[6] = '0';}
+    fflush(stdin);
+    scanf("%c",&x[7]);
+    system(x);
+    break;
+     case 3:
+        help();
+        printf(" \n\n color code for background...  =  ");
+    fflush(stdin);
+    scanf("%c",&x[6]);
+    printf(" \n\n color code for text...  =  ");
+    fflush(stdin);
+    scanf("%c",&x[7]);
+    system(x);
+        break;
+default :
+        printf("\n\n do you want to exit.......?(y/n)   ");
+        char ch;
+        fflush(stdin);
+        scanf("%c",&ch);
+        if(ch == 'y' || ch == 'Y')
+        {
+            system("cls");
+            printf("\nHAVE A GOOD DAY........\n\n");
+            exit(0);
+        }
+        break;
+    }
 	
     getch();
     system( "cls" ) ;
@@ -72,6 +120,18 @@ char ch ;
  ch = getch();
  }while( ch == 13 ) ;
 
+}
+
+void help()
+{
+     printf("\n\n    0 = Black       8 = Gray\n\
+    1 = Blue        9 = Light Blue\n\
+    2 = Green       A = Light Green\n\
+    3 = Aqua        B = Light Aqua\n\
+    4 = Red         C = Light Red\n\
+    5 = Purple      D = Light Purple\n\
+    6 = Yellow      E = Light Yellow\n\
+    7 = White       F = Bright White ");
 }
 
 void display()
